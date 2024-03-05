@@ -6,7 +6,6 @@
 #include <math.h>
 
 
-
 Token* createToken(TokenType type, double value)
 {
     Token* newToken = (Token*)malloc(sizeof(Token));

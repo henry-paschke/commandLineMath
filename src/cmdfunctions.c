@@ -5,7 +5,7 @@
 
 void printUsage()
 {
-    fprintf(stdout, "Usage: \n    cmdmath \"math expression\"\n    cmdmath --do \"math expression\"\n    cmdmath --file path/to/math.txt\n    cmdmath --help\n");
+    fprintf(stdout, "Usage: \n    cmdmath \"math expression\" evaluates the expression.\n    cmdmath --do \"math expression\" evaluates the expression.\n    cmdmath --file path/to/math.txt evaluates the expression contained in the file.\n    cmdmath --help\n    cmdmath --env prints the current environment file.\n    cmdmath --env prints the current environment file.\n");
 }
 
 void printHelp()

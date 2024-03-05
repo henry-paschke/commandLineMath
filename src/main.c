@@ -8,35 +8,34 @@
 
 int main(int argc, char* argv[])
 {
+    char* envPath = "env.txt";
+
     if (argc == 1)
     {
         printUsage();
     }
     else
     {
-
         if (strncmp(argv[1], "--", 2) == 0)
         {
             if ((strcmp(argv[1], "--do") == 0)  && argc > 2)
             {
+                char* equation = combineArgs(2, argc, argv);
 
-            char* equation = combineArgs(2, argc, argv);
-
-            evalEquation(equation);
-            free(equation);
+                evalEquation(equation);
+                free(equation);
 
             }
             else if (strcmp(argv[1], "--file") == 0 && argc > 2)
             {
-            
-            char* equation = loadFromFile(argv[2]);
-            if (equation == NULL)
-            {
-                fprintf(stdout, "Failed to read file.\n");
-            }
+                char* equation = loadFromFile(argv[2]);
+                if (equation == NULL)
+                {
+                    fprintf(stdout, "Failed to read file.\n");
+                }
 
-            evalEquation(equation);
-            free(equation);
+                evalEquation(equation);
+                free(equation);
             }
             else if (strcmp(argv[1], "--help") == 0)
             {
