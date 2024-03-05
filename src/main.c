@@ -8,7 +8,6 @@
 
 int main(int argc, char* argv[])
 {
-    char* envPath = "env.txt";
 
     if (argc == 1)
     {
